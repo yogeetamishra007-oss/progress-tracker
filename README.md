@@ -20,8 +20,14 @@ Each entry is saved with:
 The data is stored in a local text file (`progress.txt`).  
 Weekly progress is calculated using Python’s `datetime` module and ISO week numbers.
 
-## Project Structure
-progress_tracker/ ├── tracker.py   ├── progress.txt   └── README.md       
+### Project Structure
+
+```text
+progress_tracker/
+├── tracker.py
+├── progress.txt
+└── README.md
+```    
 ## Tech Stack
 - Python
 - datetime module
