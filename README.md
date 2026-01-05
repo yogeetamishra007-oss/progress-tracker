@@ -23,7 +23,7 @@ Weekly progress is calculated using Python’s `datetime` module and ISO week nu
 ### Project Structure
 
 ```text
-progress_tracker/
+Progress_tracker
 ├── tracker.py
 ├── progress.txt
 └── README.md
