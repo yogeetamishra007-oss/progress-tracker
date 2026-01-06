@@ -1,24 +1,42 @@
-# Progress Tracker (Python)
+## Progress Tracker (Python)
 
-A simple command-line progress tracker built using Python.
+This is a terminal-based progress tracker built using Python.  
+It helps track daily tasks and study hours, stores progress locally, and provides useful summaries to analyze consistency over time.
 
-This project helps track daily study or work tasks along with the number of hours spent. The data is stored locally and can be used to compare weekly progress to see improvement or decline over time.
+The project is intentionally kept simple and beginner-friendly, with a focus on clean logic and gradual feature improvements.
 
 ## Features
-- Add daily progress (task and hours)
+- Add daily progress (date, task, hours)
 - View all recorded progress
-- Compare weekly progress totals
-- File-based storage using a simple CSV format
+- Weekly progress summary
+- Total hours worked
+- Streak tracking
+- Calculates current streak based on consecutive active days
+- Tracks longest streak achieved
+- Indicates whether progress was logged today
+- Data stored locally in a text file (CSV-style format)
 - Menu-driven CLI interface
 
-## How it works
-Each entry is saved with:
-- Date
-- Task name
-- Hours spent
+## Streak Tracking
 
-The data is stored in a local text file (`progress.txt`).  
-Weekly progress is calculated using Python’s `datetime` module and ISO week numbers.
+The streak feature analyzes the dates on which progress was logged.
+
+- A streak increases when progress is logged on consecutive days.
+- If a day is missed, the current streak resets.
+- Duplicate entries for the same day are ignored.
+- The tracker displays:
+  - Current streak
+  - Longest streak
+  - Whether progress has been logged today
+## How to Run
+
+1. Clone the repository or download the ZIP
+2. Make sure Python is installed
+3. Open a terminal in the project folder
+4. Run the program using:
+
+   python tracker.py
+
 
 ### Project Structure
 
@@ -33,8 +51,17 @@ Progress_tracker
 - datetime module
 - File handling (CSV-style data)
 
-## Usage
-Run the script using:
+## Planned Improvements
 
-```bash
-python tracker.py ```
+- Daily goal tracking (e.g., target study hours per day)
+- Weekly comparison (current week vs previous week)
+- Improved error handling and input validation
+- Refactoring logic to make it reusable for a web interface
+- Optional Flask-based web dashboard with a clean UI
+- Visual progress representation (graphs or progress indicators)
+These features will be added gradually as the project evolves.
+
+## Notes
+
+This project is part of my learning journey with Python.
+The focus is on building features step by step, improving code structure, and gradually enhancing usability rather than rushing complexity.
